@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class NCController extends Controller
 {
     /**
-    * @Route("/home/{name}")
+    * @Route("/new_character")
     */
     public function indexAction($name)
     {

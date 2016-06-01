@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class LoginController extends Controller
 {
     /**
-    * @Route("/home/{name}")
+    * @Route("/login")
     */
     public function indexAction($name)
     {

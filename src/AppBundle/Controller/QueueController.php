@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class QueueController extends Controller
 {
     /**
-    * @Route("/home/{name}")
+    * @Route("/queue")
     */
     public function indexAction($name)
     {

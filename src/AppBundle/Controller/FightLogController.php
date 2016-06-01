@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class FightLogController extends Controller
 {
     /**
-    * @Route("/home/{name}")
+    * @Route("/figh_log")
     */
     public function indexAction($name)
     {
