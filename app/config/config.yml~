@@ -46,7 +46,7 @@ assetic:
 #MaterializeBundle
 materialize:
     local_js: '@AppBundle/Resources/public/js/materialize.min.js'
-    local_fonts_dir: '@AppBundle/Resources/public/font/material-design-icons/'
+    local_fonts_dir: '@AppBundle/Resources/public/font/'
     local_css: '@AppBundle/Resources/public/css/materialize.min.css'
     local_cdn: 'cdn.domain.com'
     version: 0.97.0

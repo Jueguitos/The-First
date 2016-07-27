@@ -14,8 +14,3 @@ Juego de Rol basado en una guerra entre políticos. El usuario deberá encontrar
 - Debate = Pelea
 - Discurso = Cola
 - Argumentos = Habilidades
-<<<<<<< HEAD
-- Renzo = Renzo
-=======
-- Cuassolo = Cuassolo
->>>>>>> origin/master
