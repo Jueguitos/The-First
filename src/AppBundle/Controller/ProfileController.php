@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ProfileController extends Controller
 {
     /**
-    * @Route("/profile")
+    * @Route("/profile/{name}")
     */
     public function indexAction($name)
     {
