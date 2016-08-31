@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Pelea
+ *
+ * @ORM\Table(name="PELEA", indexes={@ORM\Index(name="refpersonaje", columns={"refpersonaje"}), @ORM\Index(name="refround", columns={"refround"})})
+ * @ORM\Entity
+ */
+class Pelea
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="win", type="boolean", nullable=true)
+     */
+    private $win;
+
+    /**
+     * @var \Personaje
+     *
+     * @ORM\ManyToOne(targetEntity="Personaje")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="refpersonaje", referencedColumnName="nickname")
+     * })
+     */
+    private $refpersonaje;
+
+    /**
+     * @var \Round
+     *
+     * @ORM\ManyToOne(targetEntity="Round")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="refround", referencedColumnName="id")
+     * })
+     */
+    private $refround;
+
+
+}
+

@@ -1,0 +1,68 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Paso
+ *
+ * @ORM\Table(name="PASO")
+ * @ORM\Entity
+ */
+class Paso
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mova", type="string", length=30, nullable=true)
+     */
+    private $mova;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="movd", type="string", length=30, nullable=true)
+     */
+    private $movd;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="numero", type="integer", nullable=true)
+     */
+    private $numero;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="vidatq", type="integer", nullable=true)
+     */
+    private $vidatq;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="viddef", type="integer", nullable=true)
+     */
+    private $viddef;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="inic", type="string", length=30, nullable=true)
+     */
+    private $inic;
+
+
+}
+

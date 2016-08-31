@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Arbola
+ *
+ * @ORM\Table(name="ARBOLA", indexes={@ORM\Index(name="refclase", columns={"refclase"}), @ORM\Index(name="refhabilidades", columns={"refhabilidades"})})
+ * @ORM\Entity
+ */
+class Arbola
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tipo", type="boolean", nullable=true)
+     */
+    private $tipo;
+
+    /**
+     * @var \Clase
+     *
+     * @ORM\ManyToOne(targetEntity="Clase")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="refclase", referencedColumnName="nombre")
+     * })
+     */
+    private $refclase;
+
+    /**
+     * @var \Habilidades
+     *
+     * @ORM\ManyToOne(targetEntity="Habilidades")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="refhabilidades", referencedColumnName="nombre")
+     * })
+     */
+    private $refhabilidades;
+
+
+}
+

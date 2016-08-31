@@ -1,0 +1,54 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Habilidades
+ *
+ * @ORM\Table(name="HABILIDADES")
+ * @ORM\Entity
+ */
+class Habilidades
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=30, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $nombre = '';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tipo", type="boolean", nullable=true)
+     */
+    private $tipo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=30, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="formula", type="string", length=30, nullable=true)
+     */
+    private $formula;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nmov", type="integer", nullable=true)
+     */
+    private $nmov;
+
+
+}
+

@@ -5,14 +5,15 @@ namespace AppBundle\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class ProfileController extends Controller
 {
     /**
-    * @Route("/profile/{name}")
+    * @Route("/profile")
     */
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('profile.html.twig', array('name' => $name));
+        return $this->render('profile.html.twig');
     }
 }

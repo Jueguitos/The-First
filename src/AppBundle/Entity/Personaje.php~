@@ -1,0 +1,54 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Personaje
+ *
+ * @ORM\Table(name="PERSONAJE")
+ * @ORM\Entity
+ */
+class Personaje
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nickname", type="string", length=30, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $nickname = '';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="experiencia", type="integer", nullable=true)
+     */
+    private $experiencia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nivel", type="integer", nullable=true)
+     */
+    private $nivel;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="movmax", type="integer", nullable=true)
+     */
+    private $movmax;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="vida", type="integer", nullable=true)
+     */
+    private $vida;
+
+
+}
+

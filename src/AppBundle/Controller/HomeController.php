@@ -9,10 +9,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class HomeController extends Controller
 {
     /**
-    * @Route("/home/{name}")
+    * @Route("/")
     */
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('index.html.twig', array('name' => $name));
+        return $this->render('index.html.twig');
     }
 }

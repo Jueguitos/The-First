@@ -1,0 +1,50 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Clase
+ *
+ * @ORM\Table(name="CLASE", indexes={@ORM\Index(name="refpersonaje", columns={"refpersonaje"})})
+ * @ORM\Entity
+ */
+class Clase
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=30, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $nombre = '';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=30, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="shortname", type="string", length=2, nullable=true)
+     */
+    private $shortname;
+
+    /**
+     * @var \Personaje
+     *
+     * @ORM\ManyToOne(targetEntity="Personaje")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="refpersonaje", referencedColumnName="nickname")
+     * })
+     */
+    private $refpersonaje;
+
+
+}
+

@@ -1,0 +1,57 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Usuario
+ *
+ * @ORM\Table(name="USUARIO", indexes={@ORM\Index(name="refpersonaje", columns={"refpersonaje"})})
+ * @ORM\Entity
+ */
+class Usuario
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pass", type="string", length=30, nullable=true)
+     */
+    private $pass;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=30, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="online", type="boolean", nullable=true)
+     */
+    private $online;
+
+    /**
+     * @var \Personaje
+     *
+     * @ORM\ManyToOne(targetEntity="Personaje")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="refpersonaje", referencedColumnName="nickname")
+     * })
+     */
+    private $refpersonaje;
+
+
+}
+

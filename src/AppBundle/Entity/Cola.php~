@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cola
+ *
+ * @ORM\Table(name="COLA", indexes={@ORM\Index(name="refpersonaje", columns={"refpersonaje"}), @ORM\Index(name="refhabilidades", columns={"refhabilidades"})})
+ * @ORM\Entity
+ */
+class Cola
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=30, nullable=true)
+     */
+    private $nombre;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="defatq", type="boolean", nullable=true)
+     */
+    private $defatq;
+
+    /**
+     * @var \Personaje
+     *
+     * @ORM\ManyToOne(targetEntity="Personaje")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="refpersonaje", referencedColumnName="nickname")
+     * })
+     */
+    private $refpersonaje;
+
+    /**
+     * @var \Habilidades
+     *
+     * @ORM\ManyToOne(targetEntity="Habilidades")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="refhabilidades", referencedColumnName="nombre")
+     * })
+     */
+    private $refhabilidades;
+
+
+}
+
